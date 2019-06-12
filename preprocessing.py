@@ -38,7 +38,7 @@ print(num_timestep)
 
 
 num_timestep = 119  # Set the number of timestep to 119 since the lowest timestep in the given data is 119
-m = 9979    # number of samples
+m = num_booking    # number of samples
 n = 9   # number of fetures
 
 # convert features to numpy array
