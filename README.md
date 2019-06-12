@@ -12,7 +12,7 @@ This repository contains submission codes for Grab AI For SEA Challange(Theme: S
 7. scikit-plot
 
 ## 2. Descriptions
-A LSTM neural network model was developed to perform binary classification on given the telematics data to determine safe or dangerous driving
+A LSTM neural network model was developed to perform binary classification on given the telematics data to determine safe or dangerous driving. Deep neural network was selected to avoid the needs for manual hand engineered features.
 
 ### A. Data preprocessing
 preprocessing.py was used to read the features and labels from the csv files and convert them into numpy array. Irrelevant information is removed from the features. sliding window is used to prepare the input array for time series classification. Hence, the features array is reshaped to (number of samples, length of time steps, number of features). For the given datasets, the input array has the shape of 
