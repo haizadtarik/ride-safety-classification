@@ -36,12 +36,16 @@ for ID in features_df['bookingID'].unique():
 num_timestep = int(min(max_second))
 print(num_timestep)
 
+
+num_timestep = 119  # Set the number of timestep to 119 since the lowest timestep in the given data is 119
+m = 9979    # number of samples
+n = 9   # number of fetures
+
 # convert features to numpy array
 i=0
 num_neg = 0
-num_pos = 0
-x = np.empty([9979,num_timestep,9])
-y = np.empty([9979,1])
+x = np.empty([m,num_timestep,n])
+y = np.empty([m,1])
 for ID in features_df['bookingID'].unique():
     df = label_df[label_df['bookingID']==ID]
     label = int(df['label'].values[0])
@@ -56,7 +60,7 @@ for ID in features_df['bookingID'].unique():
     del df['Accuracy']
     x[i,:,:] = df.values[0:num_timestep,:]
     # i=i+1
-    # if i > 9978:
+    # if i > m-1:
     #     break
 
 print(x.shape)
